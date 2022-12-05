@@ -1,0 +1,116 @@
+:root {
+  --dark: #08030A;
+  --light: #E4E7E8;
+  --gray: #BBC3C9;
+  --dark-gray: #51555F;
+  --light-purple: #e0d4e8;
+  --purple: #9d2df5;
+  --orange: #feb92d;
+  --light-orange: #f6f1e5;
+  --dark-yellow: #b5a47f;
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.calculator-container {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-areas: 
+  "display display display display"
+  "clear multi power division"
+  "seven eight nine subtraction"
+  "four five six addition"
+  "one two three equals"
+  "point zeroo back equals"
+  ;
+  width: 20rem;
+  margin-inline: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.display{grid-area: display;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  font-size: 1.5rem;
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: var(--gray);
+}
+
+.output {
+  color: var(--dark-gray);
+  text-align: right;
+  font-size: 2rem;
+  /* width: 13rem; */
+}
+.output-equals {color: var(--gray);}
+
+#clear{grid-area: clear; background-color: var(--orange); color: white;}
+#multi{grid-area: multi;}
+#power{grid-area: power;}
+#division{grid-area: division;}
+#seven{grid-area: seven;}
+#eight{grid-area: eight;}
+#nine{grid-area: nine;}
+#subtraction{grid-area: subtraction;}
+#four{grid-area: four;}
+#five{grid-area: five;}
+#six{grid-area: six;}
+#addition{grid-area: addition;}
+#one{grid-area: one;}
+#two{grid-area: two;}
+#three{grid-area: three;}
+#equals{
+  grid-area: equals;
+  background-color: var(--purple);
+  color: white;
+}
+#point{grid-area: point;}
+#zeroo{grid-area: zeroo;}
+#back{grid-area: back;}
+
+.calc-btn {
+  padding: 1.5rem 1rem;
+  border-radius: 2rem;
+  color: var(--dark-gray);
+  background-color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 6px 20px;
+}
+
+.calc-btn:active {
+  box-shadow: rgba(149, 157, 165, 0.5) 0px 6px 20px;
+}
+
+.purple-operators {
+  background-color: var(--light-purple);
+  color: var(--purple);
+}
+.orange-operators {
+  background-color: var(--light-orange);
+  color: var(--dark-yellow);
+}
